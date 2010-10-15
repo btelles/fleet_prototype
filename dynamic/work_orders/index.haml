@@ -1,0 +1,38 @@
+#header
+  =render_partial '/global_nav'
+  %h2 Work Orders
+%hr
+%h3 Find by Equipment ID:
+%input(value="DOT12345")
+%a.button_button(href="/master_detail/") Go
+%h3 Most recent work orders
+%table
+  %thead
+    %tr
+      %th(rowspan="2") Work Order #
+      %th(rowspan="2") Equipment ID
+      %th(rowspan="2") Shop
+      %th(rowspan="2") Odom
+      %th(colspan="3" style="text-align: center") Dates
+      %th(rowspan="2") Repair &amp; Work Codes
+    %tr
+      %th Received
+      %th Start
+      %th Completed
+  %tbody
+    -10.times do |i|
+      %tr
+        %td
+          %a(href="/work_orders/show")=2123+i
+        %td
+          %a(href="/inventories/index") DOT56748
+        %td=1+(i*10)
+        %td=356+(i*9)
+        %td=Date.new(2010,1+i,15+i)
+        %td=Date.new(2010,2+i,15+i)
+        %td=Date.new(2010,3+i,15+i)
+        %td 
+          %a(href="/work_orders/work_code_detail") U424
+          %a(href="/work_orders/work_code_detail") U454
+          %a(href="/work_orders/work_code_detail") U227
+

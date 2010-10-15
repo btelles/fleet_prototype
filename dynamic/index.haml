@@ -1,0 +1,33 @@
+#header
+  =render_partial '/global_nav'
+  %h1 Fleet Equipment Management System
+%hr
+#home
+  %div
+    %ul
+      %li
+        %a.button_button(href="/work_orders/") Work Orders
+      %li
+        %a.button_button(href="/inventories/") Inventory
+      %li
+        %a.button_button(href="/shops/") Shops
+      %li
+        %a.button_button(href="/logs/") Logs
+      %li
+        %label
+          Equipment ID
+          %a.button_button(href="/master_detail/") Go
+          %input(value="DOT12345")
+  %div
+    %ul
+      %li
+        %a.button_button(href="/fuel_cards/") Fuel Cards
+      %li
+        %a.button_button(href="/locations/") Locations
+      %li
+        %a.button_button(href="/invoicing/") Invoices
+      %li 
+        %a.button_button(href="/report/") Reports
+      %li 
+        %a.button_button(href="/users/") Users &amp; Permissions
+

@@ -1,0 +1,34 @@
+%h2.dialog_title Run the report:
+
+#report_format
+  %h3 Select the desired format
+  %ul
+    %li
+      %label
+        %input(type="radio" name="report_format" value="immediate" selected="selected" )
+        Just show me the report
+    %li
+      %label
+        %input(type="radio" name="report_format" value="excel")
+        Excel
+    %li
+      %label
+        %input(type="radio" name="report_format" value="csv")
+        CSV
+    %li
+      %label
+        %input(type="radio" name="report_format" value="html")
+        HTML File
+  %a.button_button(href="report_show.html") Run
+#report_recipients
+  %h3 Who should receive the report?
+  %ul
+    %li
+      %input(value="sample@email.com")
+      %a.button_button(href="#") (-) Remove
+    %li
+      %input(value="sample@email.com")
+      %a.button_button(href="#") (-) Remove
+    %li
+      %a.button_button(href="#") (+) Add
+

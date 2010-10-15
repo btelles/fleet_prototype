@@ -1,0 +1,27 @@
+#header
+  =render_partial '/global_nav'
+  %h2 
+    %a.button_button(href="#") Excel
+    %a.button_button(href="#") Edit
+    My First Report
+%hr
+
+  %table
+    %thead
+      %tr
+        %th Year
+        %th Make
+        %th Model
+        %th
+          Work Order
+          %br
+          Creation
+    %tbody
+      -20.times do |i|
+        %tr
+          %td=2000+i
+          %td Ford
+          %td Taurus
+          %td= "2010/01/#{i.to_s.rjust(2, '0')}"
+
+

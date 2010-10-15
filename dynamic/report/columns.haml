@@ -1,0 +1,18 @@
+%h2 Selecting columns for new report
+#column_selector
+  #unselected_columns
+    %table
+      %tbody
+        -20.times do |item|
+          %tr
+            %td="Column #{item}"
+  #arrow_selectors
+    %a.button_button(href="#") Add &gt;&gt;
+    %a.button_button(href="#") Remove &lt;&lt;
+  #selected_columns
+    %table
+      %tbody
+        -5.times do |item|
+          %tr
+            %td="Column #{item}"
+%a.button_button(href="/report/new.html") Save and back to new

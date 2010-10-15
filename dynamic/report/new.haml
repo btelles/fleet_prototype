@@ -1,0 +1,44 @@
+#header
+  =render_partial '/global_nav'
+  %h2 Creating new report
+%hr
+#sidebar
+  %h3 Selected Options
+  =render_partial "/report/report_details_edit"
+  %a.button_button(href="/report/run_or_save.html") Run/Save
+#content
+  %h3 Preview
+  %p This preview shows fake data.
+  .overflow_table
+    %table
+      %thead
+        %tr
+          %th Vehicle Make
+          %th Vehicle Model
+          %th Vehicle Year
+          %th Vehicle Year
+          %th 
+            Work Order
+            %br
+            Creation
+          %th Crew
+          %th Total Parts
+          %th Other column
+          %th Other column
+          %th Other column
+          %th Other column
+          %th Other column
+      %tbody
+        -15.times do |i|
+          %tr
+            %td Ford
+            %td Taurus
+            %td 2005
+            %td 01/02/2010
+            %td Bob Smith
+            %td=i
+            %td Other column
+            %td Other column
+            %td Other column
+            %td Other column
+            %td Other column

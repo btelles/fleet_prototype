@@ -1,0 +1,33 @@
+%h2 Selecting filter options for new report
+#filter_options
+%table
+  %thead
+    %tr
+      %th Column
+      %th Operator
+      %th(colspan='2') Value
+  %tbody
+    %tr
+      %td Agency
+      %td=render_partial '/report/select_conditions', :local_variables => {:cond => 'Is' }
+      %td Forrestry
+      %td
+        %a.button_button(href="/report/#") (-) Remove Filter
+    %tr
+      %td Work Order Creation
+      %td=render_partial '/report/select_conditions', :local_variables => {:cond => 'Is' }
+      %td 01/01/2010
+      %td
+        %a.button_button(href="/report/#") (-) Remove Filter
+    %tr
+      %td Make
+      %td=render_partial '/report/select_conditions', :local_variables => {:cond => 'Is' }
+      %td Ford
+      %td
+        %a.button_button(href="/report/#") (-) Remove Filter
+  %tfoot
+    %tr
+      %td(colspan="3")
+        %a.button_button(href="/report/#") + Add a filter
+
+%a.button_button(href="/report/new.html") Save and back to new

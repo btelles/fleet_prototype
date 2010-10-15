@@ -1,0 +1,39 @@
+#header
+  =render_partial '/global_nav'
+  %h1 Listing reports
+%hr
+#reports
+  %h2 Canned Reports
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Description
+    %tbody
+      %tr
+        %td Work Order Report
+        %td Shows Work orders for the given time frame.
+      %tr
+        %td Report 2
+        %td Description of report 2
+  %h2 Favorite Reports
+
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Description
+    %tbody
+      %tr
+        %td Custom report 1
+        %td Description of custom report 1
+  %a(href="/report/new.html" class="button_button") New Report
+#report_details
+  %h2 Work Order Report Details
+  =render_partial "/report/report_details"
+
+  %a(href="/report/report_show.html" class="button_button") View
+  %a(href="/report/edit.html" class="button_button") Edit/Copy
+
+
+

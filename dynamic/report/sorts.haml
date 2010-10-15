@@ -1,0 +1,32 @@
+%h2 Selecting sort options for new report
+#filter_options
+%table
+  %thead
+    %tr
+      %th Column
+      %th Operator
+      %th(colspan="2") Value
+  %tbody
+    %tr
+      %td Agency
+      %td=render_partial '/report/select_sort', :local_variables => {:cond => 'Is' }
+      %td Forrestry
+      %td 
+        %a(href="/report/#") (-) Remove sort
+    %tr
+      %td Work Order Creation
+      %td=render_partial '/report/select_sort', :local_variables => {:cond => 'Is' }
+      %td 01/01/2010
+      %td 
+        %a(href="/report/#") (-) Remove sort
+    %tr
+      %td Make
+      %td=render_partial '/report/select_sort', :local_variables => {:cond => 'Is' }
+      %td Ford
+      %td 
+        %a(href="#") (-) Remove sort
+  %tfoot
+    %tr
+      %td(colspan="3")
+        %a(href="#") + Add a sort
+%a.button_button(href="/report/new.html") Save and back to new
